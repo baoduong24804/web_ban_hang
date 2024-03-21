@@ -1,1 +1,4 @@
-hi
+- HTML
+- CSS
+- JavaScript
+- Framework: Bootstrap5, AngularJS
