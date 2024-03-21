@@ -1,0 +1,197 @@
+<!--
+6 Item hàng 1
+-->
+<div class="row" style="margin-top: 100px;">
+    <div class="col-sm-12">
+        <h2>Deal chớp nhoáng</h2>
+        <span>Đề xuất cho bạn</span>
+    </div>
+    <div class="col-sm-2 item3" ng-repeat="sp in sanpham | limitTo : 6 : 12" ng-click="chonsanpham(sp)">
+        <div class="card">
+     
+            <a href="#!nv_chitietsp" style="text-decoration: none; color: black;">
+
+                <div class="card-header p-0">
+
+                    <img class="img-fluid w-100" src="{{sp.anh[0]}}" alt="">
+
+                </div>
+                <div class="card-body p-0">
+                    <span class="ms-1">
+                        {{sp.thongtin}}
+                    </span>
+                    <div class="giagiam ms-1" style="color: #f57224;">
+                        {{ sp.gia * (1 - sp.giam / 100) | number:0 }} ₫
+                    </div>
+                    <div class="ms-1" style="color: #9e9e9e; font-size: 13px;">
+                        <span class="giagoc ">{{sp.gia | number: 0}} ₫</span> <span
+                            style="color: black;">-{{sp.giam}}%</span>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+
+
+<!--
+item2 hàng 2
+-->
+
+<div class="row" style="margin-top: 100px;">
+    <div class="col-sm-12">
+        <h2>LazMall</h2>
+    </div>
+    <div class="col-sm-2" ng-repeat="sp in listsp2">
+        <div class="card">
+            <div class="card-body p-0">
+                <a ng-click="cuonlendau()" href="#!testindex">
+                    <img class="img-fluid w-100" src="{{sp.anh}}" alt="">
+                </a>
+            </div>
+            <div class="card-footer text-center">
+                <img class="w-25 img-fluid border border-black" src="{{sp.logo}}" alt="">
+                <div class="antext">
+                    {{sp.tenshop}}
+                </div>
+                <div class="antext" style="color: gray; font-size: 12px;">
+                    {{sp.tenshop}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<!--
+danh muc hang 3
+-->
+
+
+<div class="row" style="margin-top: 100px;">
+    <h2>Danh mục ngành hàng</h2>
+</div>
+
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-3" ng-repeat="dm in danhmuc1">
+                    <a ng-click="cuonlendau()" href="#!nv_list_product" style="text-decoration: none;">
+                        <div class="card">
+                            <div class="card-body text-center p-0">
+                                <img style="border-radius: 12px;" class="img-fluid w-75 mt-2" src="{{dm.anh}}" alt="">
+                                <div class="antext2">
+                                    {{dm.thongtin}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-3" ng-repeat="dm in danhmuc2">
+                    <a ng-click="cuonlendau()" href="#!nv_list_product" style="text-decoration: none;">
+                        <div class="card">
+                            <div class="card-body text-center p-0">
+                                <img style="border-radius: 12px;" class="img-fluid w-75 mt-2" src="{{dm.anh}}" alt="">
+                                <div class="antext2">
+                                    {{dm.thongtin}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-3" ng-repeat="dm in danhmuc3">
+                    <a ng-click="cuonlendau()" href="#!nv_list_product" style="text-decoration: none;">
+                        <div class="card">
+                            <div class="card-body text-center p-0">
+                                <img style="border-radius: 12px;" class="img-fluid w-75 mt-2" src="{{dm.anh}}" alt="">
+                                <div class="antext2">
+                                    {{dm.thongtin}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-3" ng-repeat="dm in danhmuc4">
+                    <a ng-click="cuonlendau()" href="#!nv_list_product" style="text-decoration: none;">
+                        <div class="card">
+                            <div class="card-body text-center p-0">
+                                <img style="border-radius: 12px;" class="img-fluid w-75 mt-2" src="{{dm.anh}}" alt="">
+                                <div class="antext2">
+                                    {{dm.thongtin}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+hang 4
+-->
+
+<div style="margin-top: 100px;" class="row">
+
+    <h1>Dành riêng cho bạn</h1>
+
+    <div class="col-sm-2 item3" ng-repeat="sp in sanpham | limitTo : 12 : 0" ng-click="chonsanpham(sp)">
+        <a ng-click="cuonlendau()" href="#!nv_chitietsp" style="text-decoration: none;">
+            <div class="card">
+                <div class="card-header p-0">
+
+                    <img class="img-fluid w-100" src="{{sp.anh[0]}}" alt="">
+
+                </div>
+                <div class="card-body p-0">
+                    <span class="ms-1">
+                        {{sp.thongtin}}
+                    </span>
+                    <div class="giagiam ms-1" style="color: #f57224;">
+                        {{ sp.gia * (1 - sp.giam / 100) | number:0 }} ₫
+                    </div>
+                    <div class="ms-1" style="color: #9e9e9e; font-size: 13px;">
+                        <span class="giagoc ">{{sp.gia | number: 0}} ₫</span> <span
+                            style="color: black;">-{{sp.giam}}%</span>
+                    </div>
+
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+</div>

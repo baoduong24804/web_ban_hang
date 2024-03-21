@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
+    <script src="/asm/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="bootstrap-icons-1.11.2/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="//lzd-img-global.slatic.net/g/tps/tfs/TB1e_.JhHY1gK0jSZTEXXXDQVXa-64-64.png">
+    <style>
+        .logorr {
+            height: 50px;
+            float: left;
+        }
+
+        .container {
+            background-color: white;
+        }
+
+
+
+
+        .headimg>div {
+            transition: background-color 0.5s ease-out;
+            font-size: 20px;
+            border-radius: 50%;
+            line-height: 1;
+            padding: 5px;
+            float: right;
+            margin-left: 5px;
+            margin-top: 10px;
+
+        }
+
+
+
+        .card-body>span {
+            font-size: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .antext {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .antext2 {
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+        }
+
+
+
+        .giagoc {
+            text-decoration: line-through;
+        }
+
+
+        .nav-item {
+            white-space: nowrap;
+        }
+
+
+        .arrow {
+            font-size: 5px;
+        }
+
+        header {
+            margin-top: 10px;
+        }
+
+        #item1 {
+            margin-top: 5px;
+        }
+
+        .img-item1>a>img {
+
+
+
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+
+        #carouselExample {
+            margin-right: 45px;
+
+        }
+
+        .img-item1 {
+            position: relative;
+
+        }
+
+        .img-item1 .img-fluid {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        .carousel-caption {
+            font-weight: bold;
+            padding: 0%;
+            color: white;
+            font-size: 18px;
+
+            bottom: 145px;
+            width: 75%;
+
+            background-color: rgba(0, 0, 0, 0.7);
+
+
+
+
+            border-radius: 12px;
+
+            backdrop-filter: blur(10px);
+
+
+        }
+
+        .pad {
+            margin-top: 10px;
+
+        }
+
+        #title-item2 {
+            margin-top: 100px;
+        }
+
+        .item2 {
+            position: relative;
+            padding: 5px;
+        }
+
+        .item3 {
+            position: relative;
+            padding: 5px;
+        }
+
+        div>.gia {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: black;
+
+            font-weight: bold;
+            background-color: white;
+            padding: 3px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .timsp>i {
+            transition: background-color 0.5s ease-out;
+            padding-right: 3px;
+            padding-left: 3px;
+            border-radius: 50% !important;
+            font-size: 20px;
+
+        }
+
+        .timsp>i:hover {
+            background-color: gray;
+        }
+
+
+
+        .nav-item {
+            line-height: 2;
+        }
+
+        .img-goiy {
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .a-goiy {
+            text-decoration: none;
+        }
+
+        .p-ghichu {
+            color: black;
+        }
+
+        .ft {
+            font-size: 12px;
+        }
+
+
+
+        .carousel-control-prev-icon {
+            background-color: gray;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 50%;
+            margin-bottom: 120px;
+        }
+
+        .carousel-control-next-icon {
+            background-color: gray;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 50%;
+            margin-bottom: 120px;
+        }
+
+
+        .hover-item-black {
+            position: relative;
+
+        }
+
+        .hover-item-black:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: width 0.3s ease;
+
+        }
+
+        .hover-item-black:hover:after {
+            width: 100%;
+
+        }
+
+        .hover-item {
+            position: relative;
+
+        }
+
+        .hover-item:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+
+        }
+
+        .hover-item:hover:after {
+            width: 100%;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body ng-app="myapp" ng-controller="myctrl" ng-init="loadtk()">
+
+    <div class="container">
+
+        <header>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="logo">
+
+                        <a href="index.html" class="text-decoration-none">
+                            <img class="logorr" src="/asm/img/logo.png" alt="">
+                            <strong><span style="font-family: 'Lato', sans-serif; color: orange; font-size: large;">RR
+                                    Shop</span></strong>
+                                    
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="headimg mb-5">
+
+                        <div class="cart hover-item-black">
+
+                            <div class="dropdown">
+                             
+                                <a href="cart.html" class="text-decoration-none text-black">
+                                    <i class="bi bi-cart"></i>
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="account hover-item-black">
+
+                            <div class="dropdown">
+                                <span style="cursor: default;" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"><i class="arrow bi bi-caret-down-fill"></i></i>
+                                </span>
+                                <ul class="dropdown-menu">
+                                    <li ng-show="hienthongtintk"><a class="dropdown-item nav-item" href="thongtin.html"><span
+                                        class="menu-icon"></span> Thông tin</a>
+                            </li>
+                                    <li><a class="dropdown-item nav-item" href="login.html"><span
+                                                class="menu-icon"></span> Đăng nhập</a>
+                                    </li>
+                                    <li><a class="dropdown-item nav-item" href="signin.html"><span
+                                                class="menu-icon"></span> Đăng kí</a></li>
+                                    <li><a class="dropdown-item nav-item" href="index.html"><span
+                                                class="menu-icon"></span> Đăng xuất</a></li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <div class="notifycation hover-item-black">
+
+                            <div class="dropdown">
+                                <span style="cursor: default;" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-bell"><i class="arrow bi bi-caret-down-fill"></i></i>
+                                </span>
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item nav-item" href="login.html"><span
+                                                class="menu-icon"></span> Thông báo</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="favorite hover-item-black">
+
+                            <div class="dropdown">
+                                <a href="farv.html" class="text-decoration-none text-black">
+                                    <i class="bi bi-heart"></i>
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </header>
+        <nav>
+
+            <div class="row">
+
+
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse ms-3" id="navbarNav">
+                                <ul class="navbar-nav mx-auto">
+                                    <!-- Các mục menu -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="bi bi-coin"></i> Giảm giá</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="bi bi-basket"></i> Sản phẩm nổi bậc</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="bi bi-bag-plus"></i> Quần - áo</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="bi bi-eyeglasses"></i> Thời trang</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+
+
+                </div>
+
+
+                <div class="col-sm-12 mt-3"></div>
+
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8 mb-1">
+                    <form class="d-flex w-100" id="search">
+                        <input class="form-control me-1" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Tìm</button>
+                    </form>
+                </div>
+                <div class="col-sm-2"></div>
+
+
+
+                <div class="col-sm-12 text-center">
+                    <hr>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <article ng-view>
+            <div class="row">
+
+                <div class="col-sm-12 d-flex justify-content-center">
+                    <div id="carouselExample" class="carousel slide w-100 mx-auto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://lzd-img-global.slatic.net/us/domino/d473c71abd6d89e5fc082df16fc87422.jpg_2200x2200q80.jpg"
+                                    class="img-fluid w-100" alt="Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://lzd-img-global.slatic.net/g/tps/imgextra/i2/O1CN01li7N561FNb3JUDFkK_!!6000000000475-0-tps-1976-688.jpg_2200x2200q80.jpg"
+                                    class="img-fluid w-100" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://lzd-img-global.slatic.net/us/domino/e4c3d5a31eda7ff557f4d3c9a75ed331.jpg_2200x2200q80.jpg"
+                                    class="img-fluid w-100" alt="Image 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://lzd-img-global.slatic.net/us/domino/928db7885ecfb3ce6406b84f829fbfa5.jpg_2200x2200q80.jpg"
+                                    class="img-fluid w-100" alt="Image 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://lzd-img-global.slatic.net/us/domino/55d212e9fea87b69a9a9909d55ad13e1.jpg_2200x2200q80.jpg"
+                                    class="img-fluid w-100" alt="Image 5">
+                            </div>
+
+                        </div>
+                        <div class="carousel-indicators">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <div class="row mt-3">
+                <div class="col-sm-12">
+
+                    <div class="nav-item dropdown">
+                        <div class="hover-item-black" style="width: 200px;" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link text-white dropdown-toggle">
+                                <i style="font-size: 20px; color: gray;" class="bi bi-list"></i>
+                                <b style="color: gray; font-weight: bold; cursor: default;">Danh mục sản phẩm</b>
+                            </a>
+                        </div>
+
+
+
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                            style=" overflow-y: auto; max-height: 300px;">
+
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">👗</span> Thời
+                                    Trang</a>
+                            </li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">🛋️</span> Nội Thất
+                                    và
+                                    Trang Trí</a></li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">🎁</span> Quà
+                                    Tặng</a>
+                            </li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">🍴</span> Đồ Dùng Cho
+                                    Nhà
+                                    Bếp</a></li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">💄</span> Sức Khỏe và
+                                    Làm
+                                    Đẹp</a></li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">🎮</span> Đồ Chơi và
+                                    Trò
+                                    Chơi</a></li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">📱</span> Điện Tử và
+                                    Phụ
+                                    Kiện</a></li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">🍔</span> Thức Ăn và
+                                    Đồ
+                                    Uống</a></li>
+                            <li><a class="dropdown-item nav-item" href="list_product.html"><span
+                                        class="menu-icon">🐾</span> Vật Nuôi và
+                                    Chăm Sóc Thú Cưng</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <i class="bi bi-dash"></i>
+            </div>
+            <!--
+6 Item hàng 1
+-->
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-sm-12">
+                    <h2>Deal chớp nhoáng</h2>
+                    <span>Đề xuất cho bạn</span>
+                </div>
+                <div class="col-sm-2 item3" ng-repeat="sp in listsp1">
+                    <div class="card">
+                        <div class="card-header p-0">
+                            <a href="product.html">
+                                <img class="img-fluid w-100" src="{{sp.anh}}" alt="">
+                            </a>
+                        </div>
+                        <div class="card-body p-0">
+                            <span class="ms-1">
+                                {{sp.thongtin}}
+                            </span>
+                            <div class="giagiam ms-1" style="color: #f57224;">
+                                {{ sp.gia * (1 - sp.giam / 100) | number:0 }} ₫
+                            </div>
+                            <div class="ms-1" style="color: #9e9e9e; font-size: 13px;">
+                                <span class="giagoc ">{{sp.gia | number: 0}} ₫</span> <span
+                                    style="color: black;">-{{sp.giam}}%</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!--
+    item2 hàng 2
+-->
+
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-sm-12">
+                    <h2>LazMall</h2>
+                </div>
+                <div class="col-sm-2" ng-repeat="sp in listsp2">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <a href="product.html">
+                                <img class="img-fluid w-100" src="{{sp.anh}}" alt="">
+                            </a>
+                        </div>
+                        <div class="card-footer text-center">
+                            <img class="w-25 img-fluid border border-black" src="{{sp.logo}}" alt="">
+                            <div class="antext">
+                                {{sp.tenshop}}
+                            </div>
+                            <div class="antext" style="color: gray; font-size: 12px;">
+                                {{sp.tenshop}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+            <!--
+    danh muc hang 3
+-->
+
+
+            <div class="row" style="margin-top: 100px;">
+                <h2>Danh mục ngành hàng</h2>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-3" ng-repeat="dm in danhmuc1">
+                                <a href="" style="text-decoration: none;">
+                                    <div class="card">
+                                        <div class="card-body text-center p-0">
+                                            <img style="border-radius: 12px;" class="img-fluid w-75 mt-2"
+                                                src="{{dm.anh}}" alt="">
+                                            <div class="antext2">
+                                                {{dm.thongtin}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-3" ng-repeat="dm in danhmuc2">
+                                <a href="" style="text-decoration: none;">
+                                    <div class="card">
+                                        <div class="card-body text-center p-0">
+                                            <img style="border-radius: 12px;" class="img-fluid w-75 mt-2"
+                                                src="{{dm.anh}}" alt="">
+                                            <div class="antext2">
+                                                {{dm.thongtin}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-3" ng-repeat="dm in danhmuc3">
+                                <a href="" style="text-decoration: none;">
+                                    <div class="card">
+                                        <div class="card-body text-center p-0">
+                                            <img style="border-radius: 12px;" class="img-fluid w-75 mt-2"
+                                                src="{{dm.anh}}" alt="">
+                                            <div class="antext2">
+                                                {{dm.thongtin}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-3" ng-repeat="dm in danhmuc4">
+                                <a href="product.html" style="text-decoration: none;">
+                                    <div class="card">
+                                        <div class="card-body text-center p-0">
+                                            <img style="border-radius: 12px;" class="img-fluid w-75 mt-2"
+                                                src="{{dm.anh}}" alt="">
+                                            <div class="antext2">
+                                                {{dm.thongtin}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--
+    hang 4
+-->
+
+            <div style="margin-top: 100px;" class="row">
+
+                <h1>Dành riêng cho bạn</h1>
+
+                <div class="col-sm-2 item3" ng-repeat="sp in sanpham">
+                    <div class="card">
+                        <div class="card-header p-0">
+                            <a href="product.html">
+                                <img class="img-fluid w-100" src="{{sp.anh}}" alt="">
+                            </a>
+                        </div>
+                        <div class="card-body p-0">
+                            <span class="ms-1">
+                                {{sp.thongtin}}
+                            </span>
+                            <div class="giagiam ms-1" style="color: #f57224;">
+                                {{ sp.gia * (1 - sp.giam / 100) | number:0 }} ₫
+                            </div>
+                            <div class="ms-1" style="color: #9e9e9e; font-size: 13px;">
+                                <span class="giagoc ">{{sp.gia | number: 0}} ₫</span> <span
+                                    style="color: black;">-{{sp.giam}}%</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!--
+
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-sm-12">
+                    <h2>Hộp quà - Thiệp quà<i class="bi bi-arrow-right-short"></i></h2>
+                    <span>Đề xuất cho bạn</span>
+                </div>
+                <div class="col-sm-4">
+                    <div class="item3">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/35056059/r/il/b78cdc/3922480847/il_680x540.3922480847_eo7r.jpg"
+                                alt="">
+                        </a>
+                        <div class="gia">
+                            100.000 VND
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-2">
+                    <div class="item3">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/12492558/r/il/045f82/4371413865/il_340x270.4371413865_s4i2.jpg"
+                                alt="">
+                        </a>
+                        <div class="gia">
+                            3.000 VND
+                        </div>
+                    </div>
+
+                    <div style="padding: 8px;"></div>
+                    <div class="item3">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/12492558/r/il/bb2e0e/5412804067/il_340x270.5412804067_36wq.jpg"
+                                alt="">
+                        </a>
+                        <div class="gia">
+                            3.000 VND
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-2">
+                    <div class="item3">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/12492558/r/il/01dba5/2928200348/il_340x270.2928200348_j3vo.jpg"
+                                alt="">
+                        </a>
+                        <div class="gia">
+                            3.000 VND
+                        </div>
+                    </div>
+
+                    <div style="padding: 8px;"></div>
+                    <div class="item3">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/12492558/r/il/045f82/4371413865/il_340x270.4371413865_s4i2.jpg"
+                                alt="">
+                        </a>
+                        <div class="gia">
+                            3.000 VND
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-2">
+
+                    <a href="" style="text-decoration: none;">
+
+                        <img class="img-fluid w-50" style="border-radius: 50%;" src="/asm/img/women.png" alt="">
+                        <p style="color: black;">Dành cho nữ</p>
+                    </a>
+
+                    <a href="" style="text-decoration: none;">
+                        <img class="img-fluid w-50" style="border-radius: 50%; margin-top: 40px;" src="/asm/img/man.png"
+                            alt="">
+                        <p style="color: black;">Dành cho nam</p>
+                    </a>
+
+                </div>
+                <div class="col-sm-2" style="text-align: center;">
+                    <a href="" style="text-decoration: none;">
+                        <img class="img-fluid w-50" style="border-radius: 50%;" src="/asm/img/friend.png" alt="">
+                        <p style="color: black;">Dành cho bạn bè</p>
+                    </a>
+                    <a href="" style="text-decoration: none;">
+                        <img class="img-fluid w-50" style="border-radius: 50%; margin-top: 40px;"
+                            src="/asm/img/3dots.png" alt="">
+                        <p style="color: black;">Khác</p>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-sm-12">
+                    <h2>Trang sức<i class="bi bi-arrow-right-short"></i></h2>
+                    <span>Đề xuất cho bạn</span>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/17663037/r/il/ce04e1/3172864599/il_340x270.3172864599_nh8u.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/37593551/c/1361/1082/1471/808/il/161d1c/4286662440/il_340x270.4286662440_2msr.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/13699519/c/1701/1352/167/87/il/671828/2603709497/il_340x270.2603709497_ahua.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/23344427/r/il/5ed3da/5424087895/il_340x270.5424087895_l8ya.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-sm-12">
+                    <h2>Mốc khóa<i class="bi bi-arrow-right-short"></i></h2>
+                    <span>Đề xuất cho bạn</span>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/14855478/c/2000/1589/0/205/il/adeedb/4722469468/il_340x270.4722469468_p190.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/37593551/c/1701/1352/858/450/il/993991/4344651632/il_340x270.4344651632_887e.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/12353646/c/1235/981/205/126/il/052a13/2042729990/il_340x270.2042729990_2v0f.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+                <div class="col-sm-3 item3">
+                    <a href="">
+                        <img class="img-fluid w-100"
+                            src="https://i.etsystatic.com/37593551/r/il/18cae7/4206401693/il_340x270.4206401693_6fgy.jpg"
+                            alt="">
+                    </a>
+                    <div class="gia">1.230.000 VND</div>
+                </div>
+            </div>
+
+
+
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-sm-12">
+                    <h2>Gợi ý đề xuất cho bạn<i class="bi bi-fire"></i></h2>
+                    <span>Dựa vào hoạt động gần đây của bạn</span>
+                </div>
+                <div class="col-sm-2" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/22098402/c/1728/1728/432/0/il/57dba8/3050088533/il_300x300.3050088533_e2zu.jpg"
+                            alt="">
+                        <p class="p-ghichu">Đám cưới</p>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/23090474/r/il/a4d3c8/5567999353/il_300x300.5567999353_mcb9.jpg"
+                            alt="">
+                        <p class="p-ghichu">Spa và quà tặng</p>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/43874922/c/958/958/4/168/il/e5d92e/5626298978/il_300x300.5626298978_6t78.jpg"
+                            alt="">
+                        <p class="p-ghichu">Dây chuyền</p>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/36314463/c/2018/2018/137/86/il/583a15/5419613013/il_300x300.5419613013_6om5.jpg"
+                            alt="">
+                        <p class="p-ghichu">Lễ hội</p>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/25934878/c/2000/2000/364/0/il/c63e8f/5338145197/il_300x300.5338145197_bivf.jpg"
+                            alt="">
+                        <p class="p-ghichu">Tranh treo</p>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/36653811/r/il/084395/4034227806/il_300x300.4034227806_nnmp.jpg"
+                            alt="">
+                        <p class="p-ghichu">Nhẫn</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-sm-12 text-center">
+                    <h2>Chào đón năm mới với những sản phẩm độc đáo<i class="bi bi-plus-lg"></i></h2>
+                    <p>Mua ngay</p>
+                </div>
+                <div class="col-sm-3" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/11524836/c/1000/1000/632/687/il/c034e7/4449149286/il_300x300.4449149286_2dbc.jpg"
+                            alt="">
+                        <p class="p-ghichu">Vòng cổ</p>
+                    </a>
+                </div>
+                <div class="col-sm-3" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/7084014/c/1499/1499/1/0/il/689377/3978349027/il_300x300.3978349027_idiz.jpg"
+                            alt="">
+                        <p class="p-ghichu">Lưu trữ</p>
+                    </a>
+                </div>
+                <div class="col-sm-3" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/5782312/r/il/0f5fc9/3097407737/il_300x300.3097407737_4rgk.jpg"
+                            alt="">
+                        <p class="p-ghichu">Giường ngủ</p>
+                    </a>
+                </div>
+                <div class="col-sm-3" style="text-align: center;">
+                    <a href="" class="a-goiy">
+                        <img class="img-fluid w-50 img-goiy"
+                            src="https://i.etsystatic.com/29322997/c/983/983/108/30/il/2d38e1/5241360799/il_300x300.5241360799_8uki.jpg"
+                            alt="">
+                        <p class="p-ghichu">Quà tặng</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-top: 100px; padding: 50px">
+                <div class="col-sm-12">
+                    <h2>Sản phẩm quà tặng được chọn nhiều nhất<i class="bi bi-arrow-right-short"></i></h2>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/18265338/r/il/5fbb42/4479721093/il_340x270.4479721093_gfiz.jpg"
+                                alt="">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Quà kỉ niệm</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/30390460/r/il/308ce9/3263040139/il_340x270.3263040139_7nus.jpg"
+                                alt="">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Dành cho nam
+                            </h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/20922675/c/2125/1687/312/133/il/e5332f/4993914558/il_340x270.4993914558_c6cv.jpg"
+                                alt="">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Dành cho nữ</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <a href="">
+                            <img class="img-fluid w-100"
+                                src="https://i.etsystatic.com/27751508/c/3000/2125/0/0/il/254978/4263660916/il_340x270.4263660916_c7z1.jpg"
+                                alt="">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Đám cưới</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+          
+
+            -->
+
+        </article>
+
+
+
+        <div class="about" style="background-color: beige; padding-top:20px; padding-bottom: 20px; margin-top: 100px;">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="fw-light">Về RR Shop</h1>
+                    <a href="" style="color: black; font-weight: lighter;">Tìm hiểu thêm về chúng tôi</a>
+                </div>
+                <div style="padding: 5px;"></div>
+
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 style="font-size: 26px;">Một cộng đồng tốt</h3>
+                            <p style="font-size: 14px;">RR Shop là thị trường trực tuyến toàn cầu, nơi mọi người cùng
+                                nhau
+                                sản xuất, bán, mua và thu thập các mặt hàng độc đáo.</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <h3 style="font-size: 26px;">Mua bán dễ dàng</h3>
+                            <p style="font-size: 14px;">Không có kho hàng RR Shop – chỉ có hàng triệu người bán những
+                                thứ họ
+                                yêu thích. Chúng tôi làm cho toàn bộ quá trình trở nên dễ dàng, giúp bạn kết nối trực
+                                tiếp
+                                với các nhà sản xuất để tìm ra điều gì đó phi thường.</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <h3 style="font-size: 26px;">Yên tâm mua hàng</h3>
+                            <p style="font-size: 14px;">Quyền riêng tư của bạn là ưu tiên cao nhất của đội ngũ tận tâm
+                                của
+                                chúng tôi. Và nếu bạn cần hỗ trợ, chúng tôi luôn sẵn sàng hỗ trợ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm2"></div>
+                <div style="padding: 20px;"></div>
+                <div class="col-sm-12 text-center">
+                    <h5 class="alert alert-info">Nếu bạn có câu hỏi. Hãy gửi nó cho chúng tôi.</h5>
+                    <button ng-click="anhienform()" type="button" class="btn btn-primary">Đặt câu hỏi
+                        ngay</button>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-6">
+                                <p class="alert alert-success mt-2 w-100" ng-show="daguicauhoi">Câu hỏi của bạn đã được gửi đi</p>
+                            </div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                    
+
+
+                    <div ng-show="hienform" class="d-flex align-items-center justify-content-center">
+
+                        <form name="form1" ng-submit="guicauhoi()">
+                            <input class="form-control mt-3" type="text" name="nhapemail"
+                                placeholder="Nhập Email của bạn" ng-model="a" required ng-pattern="/@gmail\.com$/">
+                            <i class="text-danger" ng-show="form1.nhapemail.$error.required">Email không được để
+                                trống.</i>
+                            <i class="text-danger" ng-show="form1.nhapemail.$error.pattern">Nhập đúng định dạng
+                                email.</i>
+
+                            <textarea placeholder="Vui lòng đặt câu hỏi" class="form-control mt-3" name="noidung" id=""
+                                rows="5" ng-minlength="3" ng-model="b" required></textarea>
+                            <i class="text-danger" ng-show="form1.noidung.$error.required">Vui lòng nhập nội dung.</i>
+                            <i class="text-danger" ng-show="form1.noidung.$error.minlength">Nhập ít nhất 3 kí tự.</i>
+                            <br>
+                            <button class="btn btn-primary" type="submit" ng-disabled="form1.$invalid">Submit</button>
+                        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="row w-100 ms-0">
+            <div class="col-sm-12 text-center" style="background-color: #4D6BC6 !important;">
+                <span style="font-size: 14px; padding: 10px; font-weight: bold;">RR Shop được vận hàng phát triển
+                    bởi RR Company</span>
+            </div>
+            <div class="col-sm-1" style="background-color: #3140af;"></div>
+            <div class="col-sm-4 pt-4" style="background-color: #122868; text-align: center;">
+                <img style="margin-top: 20%;" class="img-fluid w-25 h-25 mx-auto" src="/asm/img/logo.png" alt="">
+                <p></p>
+                <button style="color: white; background-color: #3140af;" type="button"
+                    class="btn btn-bd-light border-light">Tải ứng dụng</button>
+            </div>
+            <div class="col-sm-6" style="background-color: #3140af;">
+                <div class="row">
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Cửa hàng</p>
+                        </strong>
+                        <p class="ft">Danh thiếp</p>
+                    </div>
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Bán hàng</p>
+                        </strong>
+                        <p class="ft">Danh thiếp</p>
+                    </div>
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Về RR</p>
+                        </strong>
+                        <p class="ft">Danh thiếp</p>
+                    </div>
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Trợ giúp</p>
+                        </strong>
+                        <p class="ft">Telegram: RR Shop</p>
+                        <p class="ft">Email: rrshop@gmail.com</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item hover-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span class="" style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M12,5.447c2.136,0,2.389,0.008,3.233,0.047c0.78,0.036,1.204,0.166,1.485,0.275c0.373,0.145,0.64,0.318,0.92,0.598 c0.28,0.28,0.453,0.546,0.598,0.92c0.11,0.282,0.24,0.706,0.275,1.485c0.038,0.844,0.047,1.097,0.047,3.233 s-0.008,2.389-0.047,3.233c-0.036,0.78-0.166,1.204-0.275,1.485c-0.145,0.373-0.318,0.64-0.598,0.92 c-0.28,0.28-0.546,0.453-0.92,0.598c-0.282,0.11-0.706,0.24-1.485,0.275c-0.843,0.038-1.096,0.047-3.233,0.047 s-2.389-0.008-3.233-0.047c-0.78-0.036-1.204-0.166-1.485-0.275c-0.373-0.145-0.64-0.318-0.92-0.598 c-0.28-0.28-0.453-0.546-0.598-0.92c-0.11-0.282-0.24-0.706-0.275-1.485c-0.038-0.844-0.047-1.097-0.047-3.233 S5.45,9.616,5.488,8.773c0.036-0.78,0.166-1.204,0.275-1.485c0.145-0.373,0.318-0.64,0.598-0.92c0.28-0.28,0.546-0.453,0.92-0.598 c0.282-0.11,0.706-0.24,1.485-0.275C9.611,5.455,9.864,5.447,12,5.447 M12,4.005c-2.173,0-2.445,0.009-3.298,0.048 C7.85,4.092,7.269,4.227,6.76,4.425C6.234,4.63,5.787,4.903,5.343,5.348C4.898,5.793,4.624,6.239,4.42,6.765 c-0.198,0.509-0.333,1.09-0.372,1.942C4.009,9.56,4,9.833,4,12.005c0,2.173,0.009,2.445,0.048,3.298 c0.039,0.852,0.174,1.433,0.372,1.942c0.204,0.526,0.478,0.972,0.923,1.417c0.445,0.445,0.891,0.718,1.417,0.923 c0.509,0.198,1.09,0.333,1.942,0.372c0.853,0.039,1.126,0.048,3.298,0.048s2.445-0.009,3.298-0.048 c0.852-0.039,1.433-0.174,1.942-0.372c0.526-0.204,0.972-0.478,1.417-0.923c0.445-0.445,0.718-0.891,0.923-1.417 c0.198-0.509,0.333-1.09,0.372-1.942C19.991,14.45,20,14.178,20,12.005s-0.009-2.445-0.048-3.298 c-0.039-0.852-0.174-1.433-0.372-1.942c-0.204-0.526-0.478-0.972-0.923-1.417c-0.445-0.445-0.891-0.718-1.417-0.923 c-0.509-0.198-1.09-0.333-1.942-0.372C14.445,4.014,14.173,4.005,12,4.005L12,4.005z">
+                                            </path>
+                                            <path
+                                                d="M12,7.897c-2.269,0-4.108,1.839-4.108,4.108S9.731,16.113,12,16.113s4.108-1.839,4.108-4.108S14.269,7.897,12,7.897z  M12,14.672c-1.473,0-2.667-1.194-2.667-2.667S10.527,9.339,12,9.339s2.667,1.194,2.667,2.667S13.473,14.672,12,14.672z">
+                                            </path>
+                                            <circle cx="16.27" cy="7.735" r="0.96"></circle>
+                                        </svg></span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item hover-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span class="" style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M20,5V19a1.007,1.007,0,0,1-1,1H15V13.776h2l0.336-2.3H15V9.659a0.912,0.912,0,0,1,1-1.031h1.5V6.55a11.284,11.284,0,0,0-1.641-.109c-2.2,0-3.3,1.219-3.3,3.039v1.992h-2v2.3h2V20H5a1.007,1.007,0,0,1-1-1V5A1.007,1.007,0,0,1,5,4H19A1.007,1.007,0,0,1,20,5Z">
+                                            </path>
+                                        </svg></span>
+
+                                </a>
+                            </li>
+                            <li class="list-inline-item hover-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span class="" style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M18.3,8.559V9.007a9.666,9.666,0,0,1-9.729,9.737,9.614,9.614,0,0,1-5.256-1.394,5.367,5.367,0,0,0,.814.057,6.906,6.906,0,0,0,4.245-1.621,3.412,3.412,0,0,1-3.186-2.379,3.339,3.339,0,0,0,1.548-.058A3.419,3.419,0,0,1,3.988,9.993V9.952a3.427,3.427,0,0,0,1.548.424A3.407,3.407,0,0,1,4,7.54a3.261,3.261,0,0,1,.465-1.662A9.729,9.729,0,0,0,11.517,9.39a3.588,3.588,0,0,1-.073-0.79,3.408,3.408,0,0,1,3.414-3.414,3.542,3.542,0,0,1,2.518,1.075,6.837,6.837,0,0,0,2.159-.831,3.391,3.391,0,0,1-1.507,1.9A6.657,6.657,0,0,0,20,6.782,6.927,6.927,0,0,1,18.3,8.559Z">
+                                            </path>
+                                        </svg></span>
+
+                                </a>
+                            </li>
+                            <li class="list-inline-item hover-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span class="" style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M20,12c0,5.664,0,5.664-8,5.664s-8,0-8-5.664,0-5.664,8-5.664S20,6.333,20,12Zm-5,0L10,9v6Z">
+                                            </path>
+                                        </svg></span>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-1" style="background-color: #3140af;"></div>
+
+
+            <div class="col-sm-5 text-center bg-black">
+                <span style="color: white;">VietNam |</span>
+                <span style="color: white;">English(US) |</span>
+                <span style="color: white; text-decoration: underline;">đ</span><span style="color: white;">(VND)</span>
+            </div>
+            <div class="col-sm-7 text-center bg-black">
+                <span style="color: white;">Mã SV: PS33207 |</span>
+                <span style="color: white;">Dương Thái Bảo |</span>
+                <span style="color: white;">Front - end |</span>
+                <span style="color: white;">Bootstrap 5</span>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var app = angular.module("myapp", []);
+
+        
+        
+
+
+        app.controller("myctrl", function($scope, $http,$window) {
+            $scope.hienform = false;
+            $scope.daguicauhoi = false;
+            $scope.tk = '';
+            $scope.loadtk = function(){
+               $scope.hienthongtintk = false;
+                $scope.trangthai = $window.sessionStorage.getItem('login');
+                if($scope.trangthai === 'true'){
+                    $scope.hienthongtintk = true;
+                }else{
+                    $scope.hienthongtintk = false;
+                }
+            }
+
+            $scope.anhienform = function () {
+                $scope.hienform = !$scope.hienform;
+                $scope.daguicauhoi = false;
+            }
+
+            $scope.a = '';
+            $scope.b = '';
+            $scope.guicauhoi = function () {
+                $scope.a = '';
+                $scope.b = '';
+                $scope.hienform = false;
+                $scope.daguicauhoi = true;
+            }
+
+
+            // List 6 item hàng 1
+            $scope.listsp1 = [];
+            $http.get("item/item1.js").then(
+                function (d) {
+                    $scope.listsp1 = d.data;
+                });
+
+            // List 6 hàng 2
+            $scope.listsp2 = [];
+            $http.get("item/item2.js").then(
+                function (d) {
+                    $scope.listsp2 = d.data;
+                });
+
+            $scope.danhmuc1 = [];
+            $http.get("item/danhmuc1.json").then(
+                function (d) {
+                    $scope.danhmuc1 = d.data;
+                });
+
+            $scope.danhmuc2 = [];
+            $http.get("item/danhmuc2.json").then(
+                function (d) {
+                    $scope.danhmuc2 = d.data;
+                });
+            $scope.danhmuc3 = [];
+            $http.get("item/danhmuc3.json").then(
+                function (d) {
+                    $scope.danhmuc3 = d.data;
+                });
+            $scope.danhmuc4 = [];
+            $http.get("item/danhmuc4.json").then(
+                function (d) {
+                    $scope.danhmuc4 = d.data;
+                });
+
+
+            $scope.sanpham = [];
+            $http.get("item/sanpham.json").then(
+                function (d) {
+                    $scope.sanpham = d.data;
+                });
+
+        });
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let carousel = document.getElementById('carouselExample');
+            let indicatorsContainer = carousel.querySelector('.carousel-indicators');
+            let slides = carousel.querySelectorAll('.carousel-item');
+
+
+            let slideNumber = 1;
+
+
+            slides.forEach(function (_, index) {
+                let indicator = document.createElement('button');
+                indicator.type = 'button';
+                indicator.dataset.bsTarget = '#carouselExample';
+                indicator.dataset.bsSlideTo = index;
+                indicator.setAttribute('aria-label', 'Slide ' + (index + 1));
+                indicator.classList.add('indicator');
+                indicatorsContainer.appendChild(indicator);
+            });
+
+
+            carousel.addEventListener('slide.bs.carousel', function (event) {
+                slideNumber = event.to + 1;
+                updateSlideNumber();
+            });
+
+            carousel.addEventListener('slid.bs.carousel', function (event) {
+                if (event.to === slides.length - 1) {
+                    setTimeout(function () {
+                        carousel.carousel(0);
+                    }, 1000);
+                }
+            });
+
+
+            updateSlideNumber();
+
+            function updateSlideNumber() {
+                let currentIndicator = indicatorsContainer.querySelector('.active');
+                if (currentIndicator) {
+                    currentIndicator.classList.remove('active');
+                }
+                let targetIndicator = indicatorsContainer.querySelector('[data-bs-slide-to="' + (slideNumber - 1) + '"]');
+                if (targetIndicator) {
+                    targetIndicator.classList.add('active');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="/asm/css/bootstrap.min.css">
+    <script src="/asm/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="bootstrap-icons-1.11.2/font/bootstrap-icons.css">
+    <style>
+        .logorr {
+            height: 50px;
+            float: left;
+        }
+
+        .container {
+            background-color: white;
+        }
+
+
+
+        .container-fluid>a {
+            overflow: hidden;
+
+            white-space: nowrap;
+
+            text-overflow: ellipsis;
+
+        }
+
+        .headimg>div {
+            transition: background-color 0.5s ease-out;
+            font-size: 20px;
+            border-radius: 50%;
+            line-height: 1;
+            padding: 5px;
+            float: right;
+            margin-left: 5px;
+            margin-top: 10px;
+
+        }
+
+        .nav-item {
+            white-space: nowrap;
+        }
+
+        .headimg>div:hover {
+            background-color: gray;
+        }
+
+        .arrow {
+            font-size: 5px;
+        }
+
+        header {
+            margin-top: 10px;
+        }
+
+        #item1 {
+            margin-top: 5px;
+        }
+
+        .img-item1>a>img {
+
+
+
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+
+        #carouselExample {
+            margin-right: 45px;
+
+        }
+
+        .img-item1 {
+            position: relative;
+
+        }
+
+        .img-item1 .img-fluid {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        .carousel-caption {
+            font-weight: bold;
+            padding: 0%;
+            color: white;
+            font-size: 18px;
+
+            bottom: 145px;
+            width: 75%;
+
+            background-color: rgba(0, 0, 0, 0.7);
+
+
+
+
+            border-radius: 12px;
+
+            backdrop-filter: blur(10px);
+
+
+        }
+
+        .pad {
+            margin-top: 10px;
+
+        }
+
+        #title-item2 {
+            margin-top: 100px;
+        }
+
+        .item2 {
+            position: relative;
+            padding: 5px;
+        }
+
+        .item3 {
+            position: relative;
+            padding: 5px;
+        }
+
+        div>.gia {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: black;
+
+            font-weight: bold;
+            background-color: white;
+            padding: 3px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .timsp>i {
+            transition: background-color 0.5s ease-out;
+            padding-right: 3px;
+            padding-left: 3px;
+            border-radius: 50% !important;
+            font-size: 20px;
+
+        }
+
+        .timsp>i:hover {
+            background-color: gray;
+        }
+
+        img {
+            border-radius: 2px;
+        }
+
+        .nav-item {
+            line-height: 2;
+        }
+
+        .img-goiy {
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .a-goiy {
+            text-decoration: none;
+        }
+
+        .p-ghichu {
+            color: black;
+        }
+
+        .ft {
+            font-size: 12px;
+        }
+
+        @media (max-width: 100px) {
+            .navbar-nav {
+                text-align: left;
+                width: 100%;
+                position: absolute;
+                top: 56px;
+
+                left: 0;
+                background-color: #f8f9fa;
+
+                z-index: 1;
+            }
+
+            .navbar-nav .nav-item {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .carousel-control-prev-icon {
+            background-color: gray;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 50%;
+            margin-bottom: 550px;
+        }
+
+        .carousel-control-next-icon {
+            background-color: gray;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 50%;
+            margin-bottom: 550px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="logo">
+
+                        <a href="index.html" class="text-decoration-none">
+                            <img class="logorr" src="/asm/img/logo.png" alt="">
+                            <strong><span style="font-family: 'Lato', sans-serif; color: orange; font-size: large;">RR
+                                    Shop</span></strong>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="headimg">
+                        <div class="cart" style="margin-top: 20px;">
+                            <a href="cart.html" class="text-decoration-none text-black">
+                                <i class="bi bi-cart"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="account">
+
+                            <div class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i style="color: black;" class="bi bi-person-circle"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                    <li><a class="dropdown-item nav-item" href="login.html"><span
+                                                class="menu-icon"></span> Đăng nhập</a>
+                                    </li>
+                                    <li><a class="dropdown-item nav-item" href="signin.html"><span
+                                                class="menu-icon"></span> Đăng kí</a></li>
+                                    <li><a class="dropdown-item nav-item" href="index.html"><span
+                                                class="menu-icon"></span> Đăng xuất</a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="notifycation" style="margin-top: 20px;">
+                            <i class="bi bi-bell"><i class="arrow bi bi-caret-down-fill"></i></i>
+                        </div>
+
+                        <div class="favorite" style="margin-top: 20px;">
+                            <a href="farv.html" class="text-decoration-none text-black">
+                                <i class="bi bi-heart"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-8" style="margin-bottom: 5px;">
+                    <form class="d-flex ms-auto w-100" id="search">
+                        <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="row w-100">
+
+
+                <div class="col-sm-12">
+
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse ms-3" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-coin"></i> Giảm giá</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-basket"></i> Sản phẩm nổi bậc</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-bag-plus"></i> Quần - áo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-eyeglasses"></i> Thời trang</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+
+                </div>
+
+
+
+
+
+                <div class="col-sm-12">
+                    <div class="nav-item dropdown" style="margin-left: 10px;">
+                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i style="font-size: 20px; color: gray;" class="bi bi-list"></i>
+                            <b style="color: gray; font-weight: bold;">Danh mục sản phẩm</b>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                            style=" overflow-y: auto; max-height: 300px;">
+
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">👗</span> Thời
+                                    Trang</a>
+                            </li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">🛋️</span> Nội Thất
+                                    và
+                                    Trang Trí</a></li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">🎁</span> Quà
+                                    Tặng</a>
+                            </li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">🍴</span> Đồ Dùng Cho
+                                    Nhà
+                                    Bếp</a></li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">💄</span> Sức Khỏe và
+                                    Làm
+                                    Đẹp</a></li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">🎮</span> Đồ Chơi và
+                                    Trò
+                                    Chơi</a></li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">📱</span> Điện Tử và
+                                    Phụ
+                                    Kiện</a></li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">🍔</span> Thức Ăn và
+                                    Đồ
+                                    Uống</a></li>
+                            <li><a class="dropdown-item nav-item" href="#"><span class="menu-icon">🐾</span> Vật Nuôi và
+                                    Chăm Sóc Thú Cưng</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </nav>
+
+
+
+
+        <div class="row" style="margin-top: 100px; margin-bottom: 100px;">
+
+            <div class="col-sm-1">
+                <ul style="flex-direction: column;" class="navbar-nav mx-auto flex-column">
+                    <li class="nav-item" style="margin-bottom: 10px; border: 1px solid black; border-radius: 12px;">
+                        <img style="border-radius: 12px;" class="img-fluid w-100"
+                            src="https://i.etsystatic.com/43301221/r/il/7adbc5/5719557485/il_75x75.5719557485_r3tc.jpg"
+                            alt="">
+                    </li>
+                    <li class="nav-item" style="margin-bottom: 10px; border: 1px solid black; border-radius: 12px;">
+                        <img style="border-radius: 12px;" class="img-fluid w-100"
+                            src="https://i.etsystatic.com/43301221/r/il/7c3722/5719557489/il_75x75.5719557489_p2b8.jpg"
+                            alt="">
+                    </li>
+                    <li class="nav-item" style="margin-bottom: 10px; border: 1px solid black; border-radius: 12px;">
+                        <img style="border-radius: 12px;" class="img-fluid w-100"
+                            src="https://i.etsystatic.com/43301221/r/il/45a31f/5671511486/il_75x75.5671511486_7mv0.jpg"
+                            alt="">
+                    </li>
+                    <li class="nav-item" style="margin-bottom: 10px; border: 1px solid black; border-radius: 12px;">
+                        <img style="border-radius: 12px;" class="img-fluid w-100"
+                            src="https://i.etsystatic.com/43301221/r/il/bfa8d9/5694917511/il_75x75.5694917511_3zz5.jpg"
+                            alt="">
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="carouselExample" class="carousel slide col-sm-5">
+                <div class="row">
+                    <div class="col-sm-12 container-fluid d-flex justify-content-center">
+                        <div class="carousel-inner" style="border-radius: 2px;">
+                            <div class="carousel-item active">
+                                <a href="">
+                                    <img src="https://i.etsystatic.com/43301221/r/il/7adbc5/5719557485/il_794xN.5719557485_r3tc.jpg"
+                                        class="img-fluid w-100" alt="...">
+                                </a>
+
+
+                            </div>
+                            <div class="carousel-item">
+                                <a href="">
+                                    <img src="https://i.etsystatic.com/43301221/r/il/7c3722/5719557489/il_794xN.5719557489_p2b8.jpg"
+                                        class="img-fluid w-100" alt="...">
+                                </a>
+
+                            </div>
+                            <div class="carousel-item">
+                                <a href="">
+                                    <img src="https://i.etsystatic.com/43301221/r/il/45a31f/5671511486/il_794xN.5671511486_7mv0.jpg"
+                                        class="img-fluid w-100" alt="...">
+                                </a>
+
+
+                            </div>
+                            <div class="carousel-item">
+                                <a href="">
+                                    <img src="https://i.etsystatic.com/43301221/r/il/bfa8d9/5694917511/il_794xN.5694917511_3zz5.jpg"
+                                        class="img-fluid w-100" alt="...">
+                                </a>
+
+
+                            </div>
+                        </div>
+
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-2 mt-1">
+                                <img style="border-radius: 50%;" class="img-fluid w-100"
+                                    src="https://i.etsystatic.com/5824932/c/1538/1538/355/215/il/1dd019/1884746319/il_300x300.1884746319_o3sd.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-sm-10 mt-4">
+                                <span>Shop Quà Tặng</span>
+                                <span>| <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></span>
+                                <span>(123)</span>
+                            </div>
+                            <div class="danhgia">
+                                <div class="col-sm-12 mt-5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star"></i>
+                                    <span> <i class="bi bi-check"></i> Đã đánh giá</span>
+                                </div>
+                                <div class="col-sm-12 mb-2">
+                                    <span>Tôi thích nó, sản phẩm rất tuyệt vời giá rẻ.</span>
+                                </div>
+                                <div class="col-sm-12">
+                                    <span>Sản phẩm đã mua: </span>
+                                    <span style="font-size: 12px; text-decoration: underline;">Hộp quà tặng</span>
+                                </div>
+                                <div class="col-sm-2 text-center mt-2">
+                                    <img style="border-radius: 50%;" class="img-fluid w-50"
+                                        src="https://i.etsystatic.com/iusa/5df9e9/57533679/iusa_75x75.57533679_hvvn.jpg?version=0"
+                                        alt="">
+                                </div>
+                                <div class="col-sm-10 mt-3"><span>01/05/2024</span></div>
+                                <div class="col-sm-2 text-center">
+                                    <span style="font-size: 12px; text-decoration: underline;">ThaiCong</span>
+
+                                </div>
+
+                            </div>
+                            <div class="danhgia">
+                                <div class="col-sm-12 mt-5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star"></i>
+                                    <span> <i class="bi bi-check"></i> Đã đánh giá</span>
+                                </div>
+                                <div class="col-sm-12 mb-2">
+                                    <span>Tôi thích nó, sản phẩm rất tuyệt vời giá rẻ.</span>
+                                </div>
+                                <div class="col-sm-12">
+                                    <span>Sản phẩm đã mua: </span>
+                                    <span style="font-size: 12px; text-decoration: underline;">Hộp quà tặng</span>
+                                </div>
+                                <div class="col-sm-2 text-center mt-2">
+                                    <img style="border-radius: 50%;" class="img-fluid w-50"
+                                        src="https://i.etsystatic.com/iusa/5df9e9/57533679/iusa_75x75.57533679_hvvn.jpg?version=0"
+                                        alt="">
+                                </div>
+                                <div class="col-sm-10 mt-3"><span>01/05/2024</span></div>
+                                <div class="col-sm-2 text-center">
+                                    <span style="font-size: 12px; text-decoration: underline;">ThaiCong</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="col-sm-5">
+                <span style="color: #9a0027;">Combo 4 gói quà tặng</span>
+                <p style="font-size: 20px; color: #0f743b !important;">
+                    1.500.000đ <span
+                        style="font-size: 14px; color: gray; text-decoration: line-through;">3.000.000đ</span></p>
+                <p style="color: #0f743b;">Khuyến mãi 50%</p>
+                <h4>Hộp Quà Valentine kèm Chăn | Quà Tặng Bạn Gái | Gói Chăm sóc Mùa thu | Hộp Quà Hygge</h4>
+                <span>Đánh giá: <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                <div class="d-flex align-items-center mt-3">
+                    <span class="w-25">Kích thước:</span>
+                    <select class="form-select w-25" aria-label="Chọn kích thước">
+                        <option selected>Vừa</option>
+                        <option>Nhỏ</option>
+                        <option>Lớn</option>
+                    </select>
+                </div>
+                <button class="btn btn-block w-100 p-2 mt-5 mb-1" style="border: 1px solid black;" type="button">
+                    <span>Mua hàng ngay</span>
+                </button>
+                <button class="btn btn-dark w-100 p-2 mt-1 mb-1" type="button">
+                    <span>Thêm vào giỏ hàng</span>
+                </button>
+                <div class="mt-1 mb-5" style="font-size: 20px;">
+                    <i class="bi bi-heart"></i> <span>Thêm vào yêu thích</span>
+                </div>
+                <div>
+                    <h4>Giới thiệu về sản phẩm</h4>
+                    <p><i class="bi bi-arrow-right-short"></i> Làm thủ công</p>
+                    <p><i class="bi bi-arrow-right-short"></i> Vật liệu: Giấy, vải...</p>
+                    <p><i class="bi bi-arrow-right-short"></i> Chiều cao: 10cm</p>
+                    <p><i class="bi bi-arrow-right-short"></i> Chiều dài: 5cm</p>
+                    <p>Kỷ niệm mùa tình yêu với Hộp quà tặng ngày lễ tình nhân "Be Mine" đầy mê hoặc của chúng tôi, được
+                        lựa chọn chu đáo để chiều chuộng và làm hài lòng người đặc biệt của bạn.</p>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="about" style="background-color: beige; padding-top:20px; padding-bottom: 20px;">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="fw-light">Về RR Shop</h1>
+                    <a href="" style="color: black; font-weight: lighter;">Tìm hiểu thêm về chúng tôi</a>
+                </div>
+                <div style="padding: 5px;"></div>
+
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 style="font-size: 26px;">Một cộng đồng tốt</h3>
+                            <p style="font-size: 14px;">RR Shop là thị trường trực tuyến toàn cầu, nơi mọi người cùng
+                                nhau
+                                sản xuất, bán, mua và thu thập các mặt hàng độc đáo.</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <h3 style="font-size: 26px;">Mua bán dễ dàng</h3>
+                            <p style="font-size: 14px;">Không có kho hàng RR Shop – chỉ có hàng triệu người bán những
+                                thứ họ
+                                yêu thích. Chúng tôi làm cho toàn bộ quá trình trở nên dễ dàng, giúp bạn kết nối trực
+                                tiếp
+                                với các nhà sản xuất để tìm ra điều gì đó phi thường.</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <h3 style="font-size: 26px;">Yên tâm mua hàng</h3>
+                            <p style="font-size: 14px;">Quyền riêng tư của bạn là ưu tiên cao nhất của đội ngũ tận tâm
+                                của
+                                chúng tôi. Và nếu bạn cần hỗ trợ, chúng tôi luôn sẵn sàng hỗ trợ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm2"></div>
+                <div style="padding: 20px;"></div>
+                <div class="col-sm-12 text-center">
+                    <h5>Nếu bạn có câu hỏi. Chúng tôi sẽ trả lời câu hỏi của bạn.</h5>
+                    <button type="button" class="btn btn-bd-light border-dark">Đặt câu hỏi ngay</button>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="row w-100 ms-0">
+            <div class="col-sm-12 text-center" style="background-color: var(--clg-color-app-utility-background-denim-light, #4D6BC6) !important;
+            color: var(--clg-color-app-utility-text-white, #FFFFFF) !important;
+            padding: 10px;">
+                <span style="font-size: 14px; padding: 10px; font-weight: bold;">RR Shop được vận hàng phát triển
+                    bởi RR Company</span>
+            </div>
+            <div class="col-sm-1" style="background-color: #3140af;"></div>
+            <div class="col-sm-4" style="background-color: #122868; text-align: center;">
+                <img style="margin-top: 20%;" class="img-fluid w-25 h-25 mx-auto" src="/asm/img/logo.png" alt="">
+                <p></p>
+                <button style="color: white; background-color: #3140af;" type="button"
+                    class="btn btn-bd-light border-light">Tải ứng dụng</button>
+            </div>
+            <div class="col-sm-6" style="background-color: #3140af;">
+                <div class="row">
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Cửa hàng</p>
+                        </strong>
+                        <p class="ft">Danh thiếp</p>
+                    </div>
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Bán hàng</p>
+                        </strong>
+                        <p class="ft">Danh thiếp</p>
+                    </div>
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Về RR</p>
+                        </strong>
+                        <p class="ft">Danh thiếp</p>
+                    </div>
+                    <div class="col-sm-3" style="color: white; padding: 20px;">
+                        <strong>
+                            <p>Trợ giúp</p>
+                        </strong>
+                        <p class="ft">Telegram: RR Shop</p>
+                        <p class="ft">Email: rrshop@gmail.com</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M12,5.447c2.136,0,2.389,0.008,3.233,0.047c0.78,0.036,1.204,0.166,1.485,0.275c0.373,0.145,0.64,0.318,0.92,0.598 c0.28,0.28,0.453,0.546,0.598,0.92c0.11,0.282,0.24,0.706,0.275,1.485c0.038,0.844,0.047,1.097,0.047,3.233 s-0.008,2.389-0.047,3.233c-0.036,0.78-0.166,1.204-0.275,1.485c-0.145,0.373-0.318,0.64-0.598,0.92 c-0.28,0.28-0.546,0.453-0.92,0.598c-0.282,0.11-0.706,0.24-1.485,0.275c-0.843,0.038-1.096,0.047-3.233,0.047 s-2.389-0.008-3.233-0.047c-0.78-0.036-1.204-0.166-1.485-0.275c-0.373-0.145-0.64-0.318-0.92-0.598 c-0.28-0.28-0.453-0.546-0.598-0.92c-0.11-0.282-0.24-0.706-0.275-1.485c-0.038-0.844-0.047-1.097-0.047-3.233 S5.45,9.616,5.488,8.773c0.036-0.78,0.166-1.204,0.275-1.485c0.145-0.373,0.318-0.64,0.598-0.92c0.28-0.28,0.546-0.453,0.92-0.598 c0.282-0.11,0.706-0.24,1.485-0.275C9.611,5.455,9.864,5.447,12,5.447 M12,4.005c-2.173,0-2.445,0.009-3.298,0.048 C7.85,4.092,7.269,4.227,6.76,4.425C6.234,4.63,5.787,4.903,5.343,5.348C4.898,5.793,4.624,6.239,4.42,6.765 c-0.198,0.509-0.333,1.09-0.372,1.942C4.009,9.56,4,9.833,4,12.005c0,2.173,0.009,2.445,0.048,3.298 c0.039,0.852,0.174,1.433,0.372,1.942c0.204,0.526,0.478,0.972,0.923,1.417c0.445,0.445,0.891,0.718,1.417,0.923 c0.509,0.198,1.09,0.333,1.942,0.372c0.853,0.039,1.126,0.048,3.298,0.048s2.445-0.009,3.298-0.048 c0.852-0.039,1.433-0.174,1.942-0.372c0.526-0.204,0.972-0.478,1.417-0.923c0.445-0.445,0.718-0.891,0.923-1.417 c0.198-0.509,0.333-1.09,0.372-1.942C19.991,14.45,20,14.178,20,12.005s-0.009-2.445-0.048-3.298 c-0.039-0.852-0.174-1.433-0.372-1.942c-0.204-0.526-0.478-0.972-0.923-1.417c-0.445-0.445-0.891-0.718-1.417-0.923 c-0.509-0.198-1.09-0.333-1.942-0.372C14.445,4.014,14.173,4.005,12,4.005L12,4.005z">
+                                            </path>
+                                            <path
+                                                d="M12,7.897c-2.269,0-4.108,1.839-4.108,4.108S9.731,16.113,12,16.113s4.108-1.839,4.108-4.108S14.269,7.897,12,7.897z  M12,14.672c-1.473,0-2.667-1.194-2.667-2.667S10.527,9.339,12,9.339s2.667,1.194,2.667,2.667S13.473,14.672,12,14.672z">
+                                            </path>
+                                            <circle cx="16.27" cy="7.735" r="0.96"></circle>
+                                        </svg></span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M20,5V19a1.007,1.007,0,0,1-1,1H15V13.776h2l0.336-2.3H15V9.659a0.912,0.912,0,0,1,1-1.031h1.5V6.55a11.284,11.284,0,0,0-1.641-.109c-2.2,0-3.3,1.219-3.3,3.039v1.992h-2v2.3h2V20H5a1.007,1.007,0,0,1-1-1V5A1.007,1.007,0,0,1,5,4H19A1.007,1.007,0,0,1,20,5Z">
+                                            </path>
+                                        </svg></span>
+
+                                </a>
+                            </li>
+                            <li class="list-inline-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M18.3,8.559V9.007a9.666,9.666,0,0,1-9.729,9.737,9.614,9.614,0,0,1-5.256-1.394,5.367,5.367,0,0,0,.814.057,6.906,6.906,0,0,0,4.245-1.621,3.412,3.412,0,0,1-3.186-2.379,3.339,3.339,0,0,0,1.548-.058A3.419,3.419,0,0,1,3.988,9.993V9.952a3.427,3.427,0,0,0,1.548.424A3.407,3.407,0,0,1,4,7.54a3.261,3.261,0,0,1,.465-1.662A9.729,9.729,0,0,0,11.517,9.39a3.588,3.588,0,0,1-.073-0.79,3.408,3.408,0,0,1,3.414-3.414,3.542,3.542,0,0,1,2.518,1.075,6.837,6.837,0,0,0,2.159-.831,3.391,3.391,0,0,1-1.507,1.9A6.657,6.657,0,0,0,20,6.782,6.927,6.927,0,0,1,18.3,8.559Z">
+                                            </path>
+                                        </svg></span>
+
+                                </a>
+                            </li>
+                            <li class="list-inline-item" style="width: 20px;">
+                                <a class="" href="" rel="" target="">
+                                    <span style="fill: white;"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M20,12c0,5.664,0,5.664-8,5.664s-8,0-8-5.664,0-5.664,8-5.664S20,6.333,20,12Zm-5,0L10,9v6Z">
+                                            </path>
+                                        </svg></span>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-1" style="background-color: #3140af;"></div>
+
+
+            <div class="col-sm-5 text-center bg-black">
+                <span style="color: white;">VietNam |</span>
+                <span style="color: white;">English(US) |</span>
+                <span style="color: white; text-decoration: underline;">đ</span><span style="color: white;">(VND)</span>
+            </div>
+            <div class="col-sm-7 text-center bg-black">
+                <span style="color: white;">Mã SV: PS33207 |</span>
+                <span style="color: white;">Dương Thái Bảo |</span>
+                <span style="color: white;">Front - end |</span>
+                <span style="color: white;">Bootstrap 5</span>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

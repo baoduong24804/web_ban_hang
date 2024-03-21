@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="phanTrangApp">
+<head>
+  <title>Phân Trang AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body ng-controller="phanTrangCtrl">
+
+  <h1>Danh Sách Sản Phẩm</h1>
+
+  <ul>
+    <li ng-repeat="sanpham in sanphamsHienThi">{{ sanpham }}</li>
+  </ul>
+
+  <div>
+    <button ng-click="trangHienTai > 1 && chuyenTrang(trangHienTai - 1)">Trang trước</button>
+    <span>Trang {{ trangHienTai }}/{{ soTrang }}</span>
+    <button ng-click="trangHienTai < soTrang && chuyenTrang(trangHienTai + 1)">Trang sau</button>
+  </div>
+
+  <script>
+    var app = angular.module('phanTrangApp', []);
+
+    app.controller('phanTrangCtrl', function($scope) {
+      // Danh sách sản phẩm
+      $scope.sanphams = ["Sản phẩm 1", "Sản phẩm 2", "Sản phẩm 3", "Sản phẩm 4", "Sản phẩm 5", "Sản phẩm 6", "Sản phẩm 7", "Sản phẩm 8", "Sản phẩm 9", "Sản phẩm 10"];
+
+      // Số sản phẩm trên mỗi trang
+      var soSanPhamTrenTrang = 3;
+
+      // Số trang
+      $scope.soTrang = Math.ceil($scope.sanphams.length / soSanPhamTrenTrang);
+
+      // Trang hiện tại
+      $scope.trangHienTai = 1;
+
+      // Hàm chuyển trang
+      $scope.chuyenTrang = function(trang) {
+        $scope.trangHienTai = trang;
+        capNhatDanhSachHienThi();
+      };
+
+      // Cập nhật danh sách sản phẩm hiển thị dựa trên trang hiện tại
+      function capNhatDanhSachHienThi() {
+        var batDau = ( $scope.trangHienTai - 1 ) * soSanPhamTrenTrang;
+        var ketThuc = batDau + soSanPhamTrenTrang;
+        $scope.sanphamsHienThi = $scope.sanphams.slice(batDau, ketThuc);
+      }
+
+      // Khởi tạo danh sách hiển thị
+      capNhatDanhSachHienThi();
+    });
+  </script>
+
+</body>
+</html>

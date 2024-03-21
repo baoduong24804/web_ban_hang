@@ -1,0 +1,137 @@
+<style>
+    .goi-y:hover {
+        background-color: gray;
+    }
+</style>
+<div class="row mt-5 mb-5" ng-init="load_all_sp()">
+    <aside class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 style="font-weight: bold;">Lọc sản phẩm</h5>
+                <span style="font-size: 14px;">Lựa chọn những sản phẩm mong muốn</span>
+
+                <div class="input-group mb-3">
+                    <input type="text" ng-model="timkiem_text" class="form-control" placeholder="Tìm kiếm"
+                        aria-label="Tìm kiếm" aria-describedby="basic-addon2" ng-change="tim_kiem_f()">
+                    <button class="btn btn-outline-secondary" type="button" id="basic-addon2">Tìm kiếm</button>
+
+                </div>
+
+
+                <ul class="list-group">
+                    <li ng-click="kiem_tra_va_them_vao_list(item,$index)" style="cursor: default;"
+                        class="goi-y list-group-item" ng-repeat="item in list_key_work">{{ item }}</li>
+                </ul>
+
+
+                <br> <br>
+                <strong>Các loại sản phẩm</strong>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="phan_loai1"  value="dtdt" type="checkbox"> Điện thoại di động
+                </label>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="phan_loai2" value="laptop" type="checkbox"> Laptop
+                </label>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="phan_loai3" value="quanao" type="checkbox"> Quần áo
+                </label>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="phan_loai4" value="giaydep" type="checkbox"> Giày dép
+                </label>
+                <br>
+
+
+
+
+                <strong>Khoảng giá</strong>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="khoang_gia" value="duoi1tram" type="radio" name="gia"> Dưới 1 trăm
+                </label>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="khoang_gia" value="1den2tram" type="radio" name="gia"> Từ 1 - 2 trăm
+                </label>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="khoang_gia" value="2den5tram" type="radio" name="gia"> Từ 2 - 5 trăm
+                </label>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="khoang_gia" value="tren5tram" type="radio" name="gia"> Trên 5 trăm
+                </label>
+                <br>
+
+
+
+
+                <strong>Sắp xếp</strong>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="sap_xep" value="giamdan" type="radio" name="gia2"> Giá giảm dần
+                </label>
+                <br>
+                <label class="mt-2">
+                    <input ng-model="sap_xep" value="tangdan" type="radio" name="gia2"> Giá tăng dần
+                </label>
+                <br> <br>
+                <button class="btn btn-primary" ng-click="luu_gia_vao_list()">Bắt đầu lọc</button>
+
+            </div>
+        </div>
+    </aside>
+    <article class="col-sm-8">
+        <h1 ng-show="tim_kiem_bl">Kết quả tìm kiếm cho: {{lay_key_work}}</h1>
+        <div class="row">
+
+
+            <div class="col-sm-3 item3"
+                ng-repeat="sp in list_tim_thay.slice( (trang_hien_tai - 1) * 8, (trang_hien_tai * 8)) "
+                ng-click="chonsanpham(sp)">
+                <div class="card">
+
+                    <a href="#!nv_chitietsp" style="text-decoration: none; color: black;">
+
+                        <div class="card-header p-0">
+
+                            <img class="img-fluid w-100" src="{{sp.anh[0]}}" alt="">
+
+                        </div>
+                        <div class="card-body p-0">
+                            <span class="ms-1">
+                                {{sp.thongtin}}
+                            </span>
+                            <div class="giagiam ms-1" style="color: #f57224;">
+                                {{ sp.gia * (1 - sp.giam / 100) | number:0 }} ₫
+                            </div>
+                            <div class="ms-1" style="color: #9e9e9e; font-size: 13px;">
+                                <span class="giagoc ">{{sp.gia | number: 0}} ₫</span>
+                                <br>
+                                <span style="color: black;">Giảm: {{sp.giam}}%</span>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+            <div class="col-sm-12 text-center mt-3">
+                <button ng-disabled="trang_hien_tai == 1" class="btn btn-primary"
+                    ng-click="trang_hien_tai != 1 ? trang_hien_tai = trang_hien_tai - 1 : null">Trang trước</button>
+                <span>Trang {{ trang_hien_tai }}/{{ so_trang }}</span>
+                <button ng-disabled="trang_hien_tai == so_trang || so_trang == 0" class="btn btn-primary"
+                    ng-click="so_trang > 1 && trang_hien_tai != so_trang ? trang_hien_tai = trang_hien_tai + 1 : null">Trang
+                    sau</button>
+            </div>
+
+        </div>
+
+
+    </article>
+</div>
